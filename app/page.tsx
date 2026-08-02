@@ -4,12 +4,12 @@ import { motion, useAnimationFrame, useMotionValue, useScroll, useTransform, typ
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import Grainient from "./components/Grainient";
 
-const navItems = [
+const navItems: { label: string; href: string }[] = []; /*
   { label: "经历", href: "#about" },
   { label: "项目", href: "#projects" },
   { label: "技能", href: "#strengths" },
   { label: "联系", href: "#contact" },
-];
+*/
 
 const decorImages = [
   { src: "https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png", className: "top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[120px] sm:w-[160px] md:w-[210px]", x: -80 },
@@ -144,7 +144,7 @@ function HeroSection() {
         <a className="portfolio-nav-contact" href="#contact">联系我</a>
       </motion.nav>
       <div className="hero-copy">
-        <FadeIn delay={0.25} y={36}><h1><ShinyText text="用克制的视觉系统，为品牌建立可被记住的未来感。" speed={7.5} /></h1></FadeIn>
+        <FadeIn delay={0.25} y={36}><h1><ShinyText text="以 AI 影像创作，记录我的视觉实验与作品表达。" speed={7.5} /></h1></FadeIn>
       </div>
     </section>
   );
